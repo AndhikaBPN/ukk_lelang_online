@@ -57,6 +57,7 @@ class HistoryController extends Controller
         
         if($request->penawaran_harga <= $cek->harga_awal) {
             // return redirect('/lelang')->alert('message','Penawaran harga tidak boleh kurang atau sama dengan harga awal!!!');
+            // sorting harga descending limit 1
             return redirect()->back()->with('warning', 'Penawaran harga tidak boleh KURANG atau SAMA DENGAN harga awal!!!');
 
         }else{
